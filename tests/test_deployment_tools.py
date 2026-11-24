@@ -12,9 +12,9 @@ from iec61499_mgmt.sysfile import load_application
 from iec61499_mgmt.typelib import build_library, read_fbt, read_types
 from iec61499_mgmt.verify import same_value, time_ms
 
-ROOT = Path(__file__).resolve().parents[2]
-# A generated project of the cell serves as the test system (copy it in when this becomes its own repository).
-PROJECT = ROOT / "cell" / "control" / "FillingModule"
+FIXTURES = Path(__file__).resolve().parent / "fixtures"
+# A generated project of the aseptic line (its filling module, of 24 Nov 2026) serves as the test system.
+PROJECT = FIXTURES / "FillingModule"
 TYPES = PROJECT / "Type Library"
 SYS = PROJECT / "FillingModule.sys"
 APP = "Filling"

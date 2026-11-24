@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "iec61499-mgmt"
+version = "0.1.0"
+description = "A Python client for the IEC 61499 management protocol of Eclipse 4diac FORTE: deployment plans, type libraries, boot files and read-back verification"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+dependencies = ["pydantic>=2.9,<3", "defusedxml>=0.7,<1"]
+
+[project.optional-dependencies]
+test = ["pytest>=7,<9"]
+
+[project.scripts]
+iec61499 = "iec61499_mgmt.cli:main"
+
+[tool.setuptools]
+packages = ["iec61499_mgmt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
