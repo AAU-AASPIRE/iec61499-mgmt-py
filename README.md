@@ -15,6 +15,6 @@ with Client("localhost", 61499) as forte:
     ...                     # the management commands (CREATE, START, QUERY, ...) of FORTE's protocol
 ```
 
-Used by [modsync](https://github.com/AAU-AASPIRE/modsync) to change a running module online and by
-[modreg](https://github.com/AAU-AASPIRE/modreg) to read what runs. Part of
+Used by modsync to change a running module online and by modreg to read what runs (both in
+[aaspire-tools](https://github.com/AAU-AASPIRE/aaspire-tools)). Part of
 [AASPIRE](https://github.com/AAU-AASPIRE/aaspire).
